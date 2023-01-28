@@ -1,0 +1,54 @@
+﻿<Window x:Class="CargoProjectWPF.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CargoProjectWPF"
+        mc:Ignorable="d"
+        
+        xmlns:mD="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="MainView" 
+        Height="750"
+        Width="550"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="#be9b7b"
+        AllowsTransparency="True"
+        WindowState="{Binding WindowState}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.07*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Button
+                Name="ButtonMinimize"
+                HorizontalAlignment="Left"
+                Command="{Binding MinimizeApp}"
+                Style="{StaticResource MaterialDesignToolForegroundButton}" 
+                Width="115" Margin="0,12,0,8">
+                <mD:PackIcon Kind="Minimize"/>
+            </Button>
+
+            <Button 
+                Name="ButtonClose"
+                Command="{Binding CloseApp}"
+                Style="{StaticResource MaterialDesignToolForegroundButton}"
+                Width="114"
+                Margin="436,12,0,5">
+                <mD:PackIcon Kind="Close"/>
+            </Button>
+        </Grid>
+
+
+
+        <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel}"/>
+    </Grid>
+</Window>

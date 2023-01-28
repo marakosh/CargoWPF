@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="CargoProjectWPF.View.SignInView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CargoProjectWPF.View"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        xmlns:vm="clr-namespace:CargoProjectWPF.ViewModel"
+        d:DataContext="{d:DesignInstance vm:SignInViewModel}"
+        xmlns:mD="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="Transparent"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Height="550" Width="800"
+        Name="MySignInView">
+
+    <Grid Background="#be9b7b">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.01*"/>
+                <RowDefinition Height="2*"/>
+                <!--login to your acc-->
+                <RowDefinition Height="1*"/>
+                <!--login-->
+                <RowDefinition Height="1*"/>
+                <!--password-->
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" 
+                       Text="Login to your Account" 
+                       TextAlignment="Center" 
+                       TextElement.Foreground="#FFDEBF"
+                       VerticalAlignment="Center" 
+                       FontSize="25" 
+                       FontWeight="DemiBold"
+                       FontFamily="Artifakt Element Heavy"/>
+
+            <TextBox Grid.Row="2"
+                     TextElement.Foreground="#FFDEBF"
+                     Text="{Binding UsernameText}"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     materialDesign:HintAssist.Hint="Your login"
+                     MaxLength="25"
+                     FontSize="20" 
+                     Margin="30,31,30,20"/>
+
+
+            <TextBox Grid.Row="3"
+                     TextElement.Foreground="#FFDEBF"
+                     materialDesign:HintAssist.Hint="Your password"
+                     Text="{Binding PasswordText}"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     MaxLength="25"
+                     FontSize="20" 
+                     Margin="30,31,30,20"/>
+
+            <Button  Grid.Row="4"
+                     Background="#346673"
+                     Foreground="White"
+                     Content="Sign in"
+                     Command="{Binding SignIn}"
+                     CommandParameter="{Binding ElementName=UserPassword}" 
+                     materialDesign:ButtonAssist.CornerRadius="15"
+                     Height="30"
+                     Margin="80,10,80,0" />
+
+            <TextBlock Grid.Row="5"
+                    Text="{Binding ErrorText}"   
+                    Foreground="Black"/>
+
+            <Label Grid.Row="5"
+                   Height="30"
+                   Width="154" 
+                   Margin="0,-90,0,0"
+                   Content="Not a user?"
+                   Foreground="#346673"
+                   FontSize="17"
+                   />
+
+
+            <Button  Grid.Row="5"
+                     Background="#346673"
+                     Foreground="White"
+                     Content="Sign up"
+                     Command="{Binding SignUp}"
+                     materialDesign:ButtonAssist.CornerRadius="15" 
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left" 
+                     Height="30"
+                     Width="154" 
+                     Margin="265,-90,0,0" 
+
+                    />
+        </Grid>
+    </Grid>
+</UserControl>

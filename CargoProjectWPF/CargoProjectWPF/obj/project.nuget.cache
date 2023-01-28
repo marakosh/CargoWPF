@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "37QGqUKwzfkyzBGG1tISr4QOvOsXfe1514ktpRjF7BKFjhHVog6dFl3hxOIO8ZUQET/5QWW0APC1C9vsPhv3kQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marat\\source\\repos\\CargoProjectWPF\\CargoProjectWPF\\CargoProjectWPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marat\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\materialdesigncolors\\2.0.9\\materialdesigncolors.2.0.9.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\materialdesignthemes\\4.6.1\\materialdesignthemes.4.6.1.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\simpleinjector\\5.4.1\\simpleinjector.5.4.1.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\system.componentmodel\\4.0.1\\system.componentmodel.4.0.1.nupkg.sha512",
+    "C:\\Users\\marat\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
